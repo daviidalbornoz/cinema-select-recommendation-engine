@@ -15,12 +15,6 @@ A Netflix-style, client-side movie recommendation site built through an AI-assis
 - HTML, CSS, JavaScript (vanilla)
 - Git + GitHub
 
-## Run Locally
-```bash
-cd movie-recommender
-python3 -m http.server 8000
-# open http://localhost:8000
-
 ## Screenshots
 
 ### Featured & Hero
@@ -37,3 +31,9 @@ python3 -m http.server 8000
 
 ### Explainable Recommendations
 ![Recommendations](assets/screenshots/recommendations.png)
+
+## Run Locally
+```bash
+cd movie-recommender
+python3 -m http.server 8000
+# open http://localhost:8000
