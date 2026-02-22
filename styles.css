@@ -21,6 +21,10 @@ main{margin-top:20px}
 #search::placeholder{color:#cbd5e1}
 #randomBtn{padding:12px 20px;border:none;background:#5bc0be;color:#0b132b;border-radius:8px;cursor:pointer;font-weight:700;transition:all .3s ease}
 #randomBtn:hover{background:#3a86ff;color:#ffffff;transform:scale(1.05)}
+#watchlistViewBtn:hover{
+  border-color:#5bc0be;
+  transform:scale(1.03);
+}
 #sort-filter,#actor-filter,#director-filter{padding:10px 14px;border-radius:8px;border:1px solid #3a86ff;background:#1c2541;color:#ffffff;cursor:pointer}
 #genre-filters{display:flex;gap:10px;flex-wrap:wrap}
 .genre-btn{padding:8px 16px;border-radius:999px;border:2px solid #3a86ff;background:transparent;color:#3a86ff;cursor:pointer;font-weight:600;transition:all .3s ease}
@@ -61,12 +65,21 @@ main{margin-top:20px}
   object-fit:contain;
   border-radius:10px;
   box-shadow:0 8px 32px rgba(91,192,190,.2);
-  margin-bottom:16px;
   display:block;
 }
 .detail-info h3{margin:0 0 12px;color:#5bc0be;font-size:1.5rem}
 .movie-meta{font-size:.9rem;color:#cbd5e1;margin:6px 0}
 .movie-desc{margin-top:12px;color:#cbd5e1;font-size:.95rem;line-height:1.6}
+.poster-frame{
+  width:100%;
+  max-width:420px;
+  border-radius:12px;
+  background:linear-gradient(135deg, rgba(91,192,190,.10), rgba(58,134,255,.06));
+  padding:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.06);
+  margin-bottom:16px;
+}
 
 /* Watchlist Button */
 .watchlist-btn{width:100%;padding:12px;margin:12px 0;border:2px solid #5bc0be;background:#0b132b;color:#5bc0be;border-radius:8px;cursor:pointer;font-weight:700;transition:all .3s;font-size:.95rem}
@@ -290,4 +303,20 @@ footer{margin-top:32px;padding:20px;text-align:center;color:#cbd5e1;font-size:.9
     width:100%;
     height:220px;
   }
+}
+
+#watchlistViewBtn{
+  padding:12px 20px;
+  border:1px solid #3a86ff;
+  background:#1c2541;
+  color:#ffffff;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+  transition:all .3s ease;
+}
+#watchlistViewBtn.active{
+  background:#5bc0be;
+  color:#0b132b;
+  border-color:#5bc0be;
 }

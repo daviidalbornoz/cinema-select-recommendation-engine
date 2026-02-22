@@ -7,6 +7,7 @@ let selectedSort = ''
 let currentSelectedMovieId = null
 let currentSelectedMovie = null
 let currentFilteredList = []
+let watchlistOnly = false
 
 async function load() {
   const res = await fetch('movies.json')
@@ -70,6 +71,12 @@ async function fetchPostersFromTMDB() {
 function setupControls() {
   document.getElementById('search').addEventListener('input', (e) => {
     searchQuery = e.target.value.toLowerCase()
+    applyFilters()
+  })
+
+  document.getElementById('watchlistViewBtn').addEventListener('click', () => {
+    watchlistOnly = !watchlistOnly
+    document.getElementById('watchlistViewBtn').classList.toggle('active', watchlistOnly)
     applyFilters()
   })
 
@@ -169,6 +176,7 @@ function applyFilters() {
     if (selectedGenre && !m.genres.includes(selectedGenre)) return false
     if (selectedActor && !m.actors.includes(selectedActor)) return false
     if (selectedDirector && m.director !== selectedDirector) return false
+    if (watchlistOnly && !isInWatchlist(m.id)) return false
     return true
   })
 
@@ -233,10 +241,12 @@ function showDetails(m) {
 
   d.innerHTML = `
     <div class="detail-grid">
-      <img class="detail-poster"
-           src="${poster}"
-           onerror="this.onerror=null;this.src='${fallback}'"
-           alt="${m.title} poster">
+      <div class="poster-frame">
+  <img class="detail-poster"
+       src="${poster}"
+       onerror="this.onerror=null;this.src='${fallback}'"
+       alt="${m.title} poster">
+</div>
       <div class="detail-info">
         <h3>${m.title} <span class="movie-meta">(${m.year})</span></h3>
         <p class="movie-meta">Genres: ${m.genres.join(', ')}</p>
