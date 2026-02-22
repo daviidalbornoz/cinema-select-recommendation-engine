@@ -20,3 +20,20 @@ A Netflix-style, client-side movie recommendation site built through an AI-assis
 cd movie-recommender
 python3 -m http.server 8000
 # open http://localhost:8000
+
+## Screenshots
+
+### Featured & Hero
+![Featured](assets/screenshots/home.png)
+
+### Filtering & Sorting
+![Filters](assets/screenshots/filters.png)
+
+### Insights Panel
+![Insights](assets/screenshots/insights.png)
+
+### Watchlist Mode
+![Watchlist](assets/screenshots/watchlist.png)
+
+### Explainable Recommendations
+![Recommendations](assets/screenshots/recommendations.png)
