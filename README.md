@@ -1,5 +1,7 @@
 # Cinema Select — Movie Recommendation Engine 🎬
 
+Live Demo: https://daviidalbornoz.github.io/cinema-select-recommendation-engine/
+
 A Netflix-style, client-side movie recommendation site built through an AI-assisted “vibecoding” workflow (started from a GitHub Copilot scaffold, then iterated into a polished product).
 
 ## Features
@@ -14,23 +16,6 @@ A Netflix-style, client-side movie recommendation site built through an AI-assis
 ## Tech Stack
 - HTML, CSS, JavaScript (vanilla)
 - Git + GitHub
-
-## Screenshots
-
-### Featured & Hero
-![Featured](assets/screenshots/home.png)
-
-### Filtering & Sorting
-![Filters](assets/screenshots/filters.png)
-
-### Insights Panel
-![Insights](assets/screenshots/insights.png)
-
-### Watchlist Mode
-![Watchlist](assets/screenshots/watchlist.png)
-
-### Explainable Recommendations
-![Recommendations](assets/screenshots/recommendations.png)
 
 ## Run Locally
 ```bash
